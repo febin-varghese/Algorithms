@@ -26,6 +26,7 @@ def buildHeap(numbers):
     for idx in range(start_idx, -1, -1):
         heapifyArray(numbers, length, idx)
 
+
 def heapSort(numbers):
     for idx in range(len(numbers)-1, 0, -1):
         numbers[idx], numbers[0] = numbers[0], numbers[idx]
