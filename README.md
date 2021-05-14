@@ -7,3 +7,4 @@
 5. quick_sort.py: Quick sort algorithm
 ### Searching
 1. binary_search.py: Binary search algorithm
+2. bft_tree.py: Breadth First Tree algorithm
