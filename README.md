@@ -12,3 +12,4 @@
 1. binary_search.py: Binary search algorithm
 2. bft_tree.py: Breadth First Search for a binary tree
 3. dfs_tree.py: Depth First Search for a binary tree
+4. interpolation_search.py: Interpolation search algorithm
