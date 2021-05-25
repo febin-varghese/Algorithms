@@ -7,7 +7,7 @@ from quick_sort import quickSort
 
 def fibonacciSearch(sorted_numbers, integer):
     length = len(sorted_numbers)
-    fibonacci_numbers =[0, 1]
+    fibonacci_numbers = [0, 1]
     k = 1
     m = 1
     while m < length:
