@@ -13,6 +13,7 @@
 2. bft_tree.py: Breadth First Search for a binary tree
 3. dfs_tree.py: Depth First Search for a binary tree
 4. interpolation_search.py: Interpolation search algorithm
+5. fibonacci_search.py: Fibonacci search algorithm
 
 ### Algebra
 1. binary_exp.py: Binary exponentiation
