@@ -7,36 +7,34 @@ from quick_sort import quickSort
 
 def fibonacciSearch(sorted_numbers, integer):
     length = len(sorted_numbers)
-    m2 = 0
-    m1 = 1
-    m = m1 + m2
+    fibonacci_numbers =[0, 1]
+    k = 1
+    m = 1
     while m < length:
-        m2 = m1
-        m1 = m
-        m = m1 + m2
+        m = fibonacci_numbers[k] + fibonacci_numbers[k - 1]
+        fibonacci_numbers.append(m)
+        k += 1
+    if m == 0:
+        return -1
     offset = -1
     while m > 1:
-        idx = min(offset + m2, length-1)
-        if sorted_numbers[idx] < integer:
-            m = m1
-            m1 = m2
-            m2 = m - m1
-            offset = idx
-        elif sorted_numbers[idx] > integer:
-            m = m2
-            m1 = m1 - m2
-            m2 = m - m1
-        else:
+        idx = min(offset + fibonacci_numbers[k-2], length - 1)
+        if sorted_numbers[idx] == integer:
             return idx
-    if m1 and sorted_numbers[length-1] == integer:
-        return length - 1
+        elif integer > sorted_numbers[idx]:
+            k -= 1
+            m = fibonacci_numbers[k]
+            offset = idx
+        else:
+            k -= 2
+            m = fibonacci_numbers[k]
     return -1
 
 
 if __name__ == "__main__":
     # Random number generation
     print("Fibonacci search algorithm")
-    limit = 10
+    limit = 100
     rand_array = np.random.randint(0, 100, limit)
     print("numbers")
     print(rand_array)
